@@ -39,13 +39,16 @@ function checkAnswer(currentLevel) {
   }
 }
 
-$(document).on("keydown", function(e) {
+$(document).on("keydown", start);
+$(document).on("touchend", start);
+
+function start(e) {
   if (!started) {
     $("#level-title").text(`Level ${level}`);
     nextSequence();
     started = true;
   }
-});
+}
 
 function playSound(colour) {
   new Audio(`sounds/${colour}.mp3`).play();
