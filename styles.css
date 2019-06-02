@@ -6,7 +6,8 @@ body {
 .mask {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   cursor: pointer;
 }
 
@@ -19,6 +20,7 @@ body {
 
 .container {
   display: block;
+  z-index: 2;
   width: 50%;
   margin: auto;
 }

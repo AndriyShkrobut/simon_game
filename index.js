@@ -39,13 +39,13 @@ function checkAnswer(currentLevel) {
   }
 }
 
-// $(document).on("keydown", start);
-// $(document).on("touchend", start);
-// $(".mask").on("touchend", start);
+$(document).on("keydown", start);
+$(document).on("touchend", start);
 $("body").on("click", ".mask", start);
 
 function start(e) {
   if (!started) {
+    $(".mask").remove();
     $("#level-title").text(`Level ${level}`);
     nextSequence();
     started = true;
@@ -80,6 +80,7 @@ function gameOver() {
 
   new Audio("sounds/wrong.mp3").play();
   $("#level-title").text("Game Over, Press Any Key to Restart");
+  $("body").prepend('<div class="mask"></div>');
 
   startOver();
 }
