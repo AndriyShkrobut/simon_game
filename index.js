@@ -40,7 +40,7 @@ function checkAnswer(currentLevel) {
 }
 
 $(document).on("keydown", start);
-$(document).on("click", start);
+$(window).on("click", start);
 
 function start(e) {
   if (!started) {
