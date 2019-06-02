@@ -39,10 +39,10 @@ function checkAnswer(currentLevel) {
   }
 }
 
-$(document).on("keydown", start);
-$(document).on("touchend", start);
-$("body").on("touchend", start);
-$("body").on("click", start);
+// $(document).on("keydown", start);
+// $(document).on("touchend", start);
+$(".mask").on("touchend", start);
+$(".mask").on("click", start);
 
 function start(e) {
   if (!started) {

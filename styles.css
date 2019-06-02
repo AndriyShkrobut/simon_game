@@ -3,6 +3,13 @@ body {
   background-color: #011f3f;
 }
 
+.mask {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  cursor: pointer;
+}
+
 #level-title {
   font-family: "Press Start 2P", cursive;
   font-size: 3rem;
