@@ -21,7 +21,7 @@ function nextSequence() {
   playSound(randomChosenColour);
 }
 
-$("div[type='button'").on("click", handleClick);
+$("div[type='button']").on("click", handleClick);
 
 function checkAnswer(currentLevel) {
   console.log(gamePattern);
@@ -41,8 +41,8 @@ function checkAnswer(currentLevel) {
 
 // $(document).on("keydown", start);
 // $(document).on("touchend", start);
-$(".mask").on("touchend", start);
-$(".mask").on("click", start);
+// $(".mask").on("touchend", start);
+$("body").on("click", ".mask", start);
 
 function start(e) {
   if (!started) {
