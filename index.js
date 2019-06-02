@@ -41,6 +41,7 @@ function checkAnswer(currentLevel) {
 
 $(document).on("keydown", start);
 $(document).on("touchend", start);
+$("html").on("touchend", start);
 
 function start(e) {
   if (!started) {
